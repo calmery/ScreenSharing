@@ -1,0 +1,26 @@
+{
+  "name": "Screen Sharing",
+  "description": "Share the screen from your computer in a video conversation.",
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:3000/*"
+      ],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "desktopCapture",
+    "http://localhost:3000/*",
+    "tabs"
+  ]
+}
